@@ -12,7 +12,7 @@ RUN set -x && \
 # Add backup script
 COPY scripts /scripts
 COPY backup /backup
-#ENTRYPOINT /scripts/backup.sh
+ENTRYPOINT /scripts/backup.sh
 
 # This is the time that the bash script waits before backup
 ENV BACKUP_INTERVAL_SECONDS="10800"
